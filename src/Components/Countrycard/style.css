@@ -1,0 +1,13 @@
+#flagimage {
+    height: 150px;
+    width: 260px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.wordwrap {
+    word-wrap: break-word;
+    width: 260px;
+    margin: 0 auto;
+}
+
