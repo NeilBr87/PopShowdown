@@ -32,7 +32,7 @@ body {
     width: 150px;
     height: 90px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
     border: 2px solid black;
     border-radius: 10px;
   }
@@ -68,10 +68,11 @@ body {
     width: 500px;
     padding: 20px 20px 20px 20px;
     margin-top: 20px;
+    margin-bottom: 30px;
     border-radius: 10px;
     color: black;
     font-weight: bold;
-    animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 0.3s ease-in-out;
 }
 
 #correct {
@@ -80,8 +81,25 @@ body {
   font-weight: bold;
 }
 
-#playbutton1 {
-  animation: fadeIn 0.5s ease-in-out;
+#incorrect {
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#playbutton {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.scorebox {
+    background: radial-gradient(circle at 10% 20%, rgba(0, 149, 218, 0.85) 9.9%, rgb(56, 80, 114) 100.3%);
+    margin: 0 auto;
+    width: 140px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
 }
   /* animation: bop 3s ease-in-out infinite, fadeIn 1.5s ease-in-out; */
   

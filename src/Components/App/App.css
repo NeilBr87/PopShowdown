@@ -1,5 +1,5 @@
 body {
-  background-image: url("https://cdn2.picryl.com/photo/2001/12/31/earth-at-night-2001-1024.jpg");
+  background-image: url("Capture.JPG");
   background-size: cover;
   color: white;
 }
@@ -58,8 +58,43 @@ body {
   background: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
   background-clip: text;
   -webkit-background-clip: text;
+  letter-spacing: 7px;
 }
 
+#modebuttons {
+  display: flex;
+    flex-direction: row;
+    align-items: space-around;
+    justify-content: space-around;
+    gap: 100px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#cohortbutton {
+  width: 240px;
+  height: 120px;
+  font-weight: bold;
+  font-size: 20px;
+  border: 2px solid white ;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgb(82, 229, 231) 10%, rgb(19, 12, 183) 100%);
+  color: white;
+  animation: drift 3s ease-in-out infinite;
+}
+
+#solobutton {
+  width: 240px;
+  height: 120px;
+  font-weight: bold;
+  font-size: 20px;
+  border: 2px solid white ;
+  color: white;
+  border-radius: 10px;
+  background: radial-gradient(circle at 34.2% 44.3%, rgb(233, 79, 79) 6.5%, rgb(111, 34, 142) 100.2%);
+  animation: drift 3s ease-in-out infinite;
+}
 /* animation: bop 3s ease-in-out infinite, fadeIn 1.5s ease-in-out; */
 
 @keyframes fadeIn {
