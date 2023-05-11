@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Countrycard from "../Countrycard";
+import countriesData from '../API/countries.json';
 import "./style.css";
 
 export default function Game(props) {
@@ -23,25 +24,17 @@ export default function Game(props) {
   }
 
   function handleClick(event) {
-    fetch("https://restcountries.com/v3.1/all")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Response data:", data);
-        const randomnumberchoice = Math.floor(Math.random() * 245);
-        const randomnumberchoice1 = Math.floor(Math.random() * 245);
-        setAnswerClicked(false);
-        setHideAnswerButtons(false);
-        setCountryData(data[randomnumberchoice]);
-        setCountryData1(data[randomnumberchoice1]);
-        setCountryName(data[randomnumberchoice].name.common);
-        setCountryName1(data[randomnumberchoice1].name.common);
-        setCountry1pop(data[randomnumberchoice].population);
-        setCountry2pop(data[randomnumberchoice1].population);
-        setButtonClicked(true);
-      })
-      .catch((error) => {
-        console.log("Error fetching data:", error);
-      });
+    const randomnumberchoice = Math.floor(Math.random() * 245);
+    const randomnumberchoice1 = Math.floor(Math.random() * 245);
+    setAnswerClicked(false);
+    setHideAnswerButtons(false);
+    setCountryData(countriesData[randomnumberchoice]);
+    setCountryData1(countriesData[randomnumberchoice1]);
+    setCountryName(countriesData[randomnumberchoice].name.common);
+    setCountryName1(countriesData[randomnumberchoice1].name.common);
+    setCountry1pop(countriesData[randomnumberchoice].population);
+    setCountry2pop(countriesData[randomnumberchoice1].population);
+    setButtonClicked(true);
   }
 
   function handleClickcountry1() {
@@ -88,29 +81,19 @@ export default function Game(props) {
     setHideAnswerButtons(true);
     }
 
-  function handleClick2(event) {
-    fetch("https://restcountries.com/v3.1/all")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Response data:", data);
-        const randomnumberchoice = Math.floor(Math.random() * 245);
-        const randomnumberchoice1 = Math.floor(Math.random() * 245);
-        setAnswerClicked(false);
-        setCountryData(data[randomnumberchoice]);
-        setCountryData1(data[randomnumberchoice1]);
-        setCountryName(data[randomnumberchoice].name.common);
-        setCountryName1(data[randomnumberchoice1].name.common);
-        setCountry1pop(data[randomnumberchoice].population);
-        setCountry2pop(data[randomnumberchoice1].population);
-        setButtonClicked(true);
-        setHideAnswerButtons(false);
-
-      })
-      .catch((error) => {
-        console.log("Error fetching data:", error);
-      });
-  }
-
+    function handleClick2(event) {
+      const randomnumberchoice = Math.floor(Math.random() * 245);
+      const randomnumberchoice1 = Math.floor(Math.random() * 245);
+      setAnswerClicked(false);
+      setHideAnswerButtons(false);
+      setCountryData(countriesData[randomnumberchoice]);
+      setCountryData1(countriesData[randomnumberchoice1]);
+      setCountryName(countriesData[randomnumberchoice].name.common);
+      setCountryName1(countriesData[randomnumberchoice1].name.common);
+      setCountry1pop(countriesData[randomnumberchoice].population);
+      setCountry2pop(countriesData[randomnumberchoice1].population);
+      setButtonClicked(true);
+    }
 
 
   return (
