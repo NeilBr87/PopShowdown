@@ -8,16 +8,17 @@ body {
     text-align: center;
     margin-top: 50px;
   }
-  
-  .container {
+  #containerOfViewports {
     display: flex;
     flex-direction: row;
-    align-items: space-around;
+    align-items: center;
     justify-content: space-around;
     gap: 200px;
     justify-content: center;
     text-align: center;
-  }  
+  }
+  
+  
   .countrycontainer {
     background-color: rgb(235, 235, 235);
     padding: 20px 20px 20px;
@@ -27,7 +28,7 @@ body {
     color: black;
     max-width: 420px;
   }
-  
+
   .countrybutton {
     width: 150px;
     height: 90px;
@@ -83,8 +84,25 @@ body {
 #playbutton1 {
   animation: fadeIn 0.5s ease-in-out;
 }
-  /* animation: bop 3s ease-in-out infinite, fadeIn 1.5s ease-in-out; */
-  
+
+@media (max-width: 480px) {
+  .countrycontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    text-align: center;
+    align-items: center !important;
+    justify-content: center !important;
+    animation: none !important;
+    width: 15%;
+    height: 120px;
+  }
+}
+
+
+
+
   @keyframes fadeIn {
     0% {
       filter : blur(10px);
@@ -95,6 +113,7 @@ body {
       opacity: 1;
     }
   }
+  
   
   @keyframes bop {
     0% {
@@ -158,6 +177,18 @@ body {
     }
   }
   
+  @keyframes driftmobile
+  {
+    0% {
+      transform: translateX(0.5px) rotate(-0.5deg);
+    }
+    50% {
+      transform: translateX(-1.5px) rotate(1.5deg);
+    }
+    100% {
+      transform: translateX(0.5px) rotate(-0.5deg);
+    }
+  }
   
   @keyframes JumpFlip {
     0% {
@@ -179,4 +210,68 @@ body {
       transform: translateY(0) rotate(360deg);
     }
   
+  }
+
+  @media (max-width: 480px) {
+    #containerOfViewports {
+      display: flex;
+      flex-direction: row;
+      gap: 50px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      animation: none;
+      margin-left: 25%;    
+    }
+  }
+
+  @media (max-width: 480px) {
+    #playbutton1 {
+      margin-left: 60%; 
+    }
+  }
+
+  @media (max-width: 480px) {
+    .answerHeading  {
+      font-size: 16px;
+      margin-left: 25%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .countrybutton  {
+      font-size: 12px !important;
+      width: 100px !important;
+      height: 60px !important;
+      margin-left: 25%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .outcome  {
+      margin-top: 0px !important; 
+      font-size: 12px !important;   
+      width: 25% !important;
+      margin-left: 45% !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .nextbutton  {
+      margin-top: 0px !important; 
+      font-size: 12px !important;   
+      width: 45% !important;
+    
+    }
+  }
+
+  
+  @media (max-width: 480px) {
+    #correct  {
+      margin-top: 0px !important; 
+      font-size: 18px !important;   
+      width: 25% !important;
+      margin-left: 25% !important;
+    
+    }
   }

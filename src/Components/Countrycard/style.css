@@ -11,3 +11,23 @@
     margin: 0 auto;
 }
 
+@media (max-width: 480px) {
+    #flagimage {
+      width: 25%;
+        height: 25%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .countrytitle {
+      font-size: 12px;
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .countryContents {
+      font-size: 10px;
+    }
+  }

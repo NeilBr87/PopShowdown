@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from 'react-helmet';
 import Countrycard from "../Countrycard";
 import countriesData from '../API/countries.json';
 import "./style.css";
@@ -70,7 +71,10 @@ export default function Game(props) {
         Play
       </button> )}
       {buttonClicked && (
-        <div className="container">
+        <div id="containerOfViewports">
+          <Helmet>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+          </Helmet>
           <div className="countrycontainer">
             <Countrycard
               countryName={countryData?.name?.common}
@@ -92,8 +96,8 @@ export default function Game(props) {
       <div>
       {!hideAnswerButton && (
             <div>
-              <h2>Which has the highest population?</h2>
-              
+              <h2 className="answerHeading">Which has the highest population?</h2>
+
               <div className="buttoncontainer">
                 <button className="countrybutton" onClick={handleClick1}>
                   Reveal the Answer!

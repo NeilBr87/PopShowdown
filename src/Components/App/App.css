@@ -4,6 +4,13 @@ body {
   color: white;
 }
 
+@media (max-width: 480px) {
+  body {
+    max-width: 200px;
+    color: white;
+  }
+}
+
 .App {
   font-family: sans-serif;
   text-align: center;
@@ -96,6 +103,49 @@ body {
   background: radial-gradient(circle at 34.2% 44.3%, rgb(233, 79, 79) 6.5%, rgb(111, 34, 142) 100.2%);
   animation: drift 3s ease-in-out infinite;
 }
+
+#switchgame123 {
+  font-size: 20px;
+  width: 200px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-bottom: -10px;
+  background: linear-gradient(135deg, rgb(233, 79, 79) 10%, rgb(19, 12, 183) 100%);
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+  #cohortbutton {
+    animation: none;
+  }
+}
+
+@media (max-width: 480px) {
+  #solobutton {
+    animation: none;
+  }
+}
+
+@media (max-width: 480px) {
+  #modebuttons {
+    display: flex;
+    flex-direction: column;
+    margin-left: 32%;
+  }
+}
+
+
+@media (max-width: 480px) {
+  #switchgame123 {
+    width: 50%;
+    font-size: 10px;
+    margin-top: 15px;
+    margin-left: 70%;
+  }
+}
+
 /* animation: bop 3s ease-in-out infinite, fadeIn 1.5s ease-in-out; */
 
 @keyframes fadeIn {
@@ -192,4 +242,28 @@ body {
     transform: translateY(0) rotate(360deg);
   }
 
+}
+
+@media (max-width: 480px) {
+  .pagetitle {
+    font-size: 26px;
+    margin-left: 25%;    
+
+  }
+}
+
+@media (max-width: 480px) {
+  .tagline {
+    display: none;
+
+  }
+}
+
+@media (max-width: 480px) {
+  #switchgame123 {
+    width: 50%;
+    font-size: 10px;
+    margin-top: 15px;
+    margin-left: 70%;
+  }
 }
