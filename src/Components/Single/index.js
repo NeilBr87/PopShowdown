@@ -98,17 +98,17 @@ export default function Game(props) {
 
 
   return (
-    <div className="Appsingle">
-      <Helmet>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-        </Helmet>
+    <div className="App">
     {!buttonClicked && (
       <button id="playbutton1" className="countrybutton" onClick={handleClick}>
         Play
       </button> )}
       {buttonClicked && (
-        <div className="containerOfViewportsSingle">
-          <div className="countrycontainersingle">
+        <div id="containerOfViewports">
+          <Helmet>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+          </Helmet>
+          <div className="countrycontainer">
             <Countrycard
               countryName={countryData?.name?.common}
               countryCapital={countryData?.capital?.[0]}
@@ -116,7 +116,7 @@ export default function Game(props) {
               countryFlag={countryData?.flags?.png}
             />
           </div>
-          <div className="countrycontainersingle">
+          <div className="countrycontainer">
             <Countrycard
               countryName={countryData1?.name?.common}
               countryCapital={countryData1?.capital?.[0]}
@@ -128,7 +128,7 @@ export default function Game(props) {
       )}
       <div>
       {!hideAnswerButton && (
-            <div>
+            <div className="answersArea">
               <h2>Which has the highest population?</h2>
               
               <div className="buttoncontainersingle">
@@ -139,7 +139,7 @@ export default function Game(props) {
                     {countryName1}
                 </button>
               </div>
-            </div>)};
+            </div>)}
     
           {answerClicked && (
             <div className="outcome">
