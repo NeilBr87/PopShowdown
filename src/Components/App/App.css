@@ -8,6 +8,10 @@ body {
   body {
     max-width: 200px;
     color: white;
+    background-image: url("Capture.JPG");
+    background-size: 300%;
+    background-position: -99% -10px;
+
   }
 }
 
@@ -254,8 +258,10 @@ body {
 
 @media (max-width: 480px) {
   .tagline {
-    display: none;
-
+    font-size: 10px;
+    margin-left: 25%;
+    margin-right: auto;
+    width: 280px;
   }
 }
 

@@ -103,7 +103,7 @@ export default function Game(props) {
                   Reveal the Answer!
                 </button>
               </div>
-            </div>)};
+            </div>)}
     
           {answerClicked && (
             <div className="outcome">
@@ -115,5 +115,5 @@ export default function Game(props) {
           )}
         </div>
     </div>
-  );
+  )
 }

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from 'react-helmet';
 import Countrycard from "../Countrycard";
 import countriesData from '../API/countries.json';
 import "./style.css";
@@ -97,14 +98,17 @@ export default function Game(props) {
 
 
   return (
-    <div className="App">
+    <div className="Appsingle">
+      <Helmet>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </Helmet>
     {!buttonClicked && (
-      <button id="playbutton" className="countrybutton" onClick={handleClick}>
+      <button id="playbutton1" className="countrybutton" onClick={handleClick}>
         Play
       </button> )}
       {buttonClicked && (
-        <div className="container">
-          <div className="countrycontainer">
+        <div className="containerOfViewportsSingle">
+          <div className="countrycontainersingle">
             <Countrycard
               countryName={countryData?.name?.common}
               countryCapital={countryData?.capital?.[0]}
@@ -112,7 +116,7 @@ export default function Game(props) {
               countryFlag={countryData?.flags?.png}
             />
           </div>
-          <div className="countrycontainer">
+          <div className="countrycontainersingle">
             <Countrycard
               countryName={countryData1?.name?.common}
               countryCapital={countryData1?.capital?.[0]}
@@ -127,11 +131,11 @@ export default function Game(props) {
             <div>
               <h2>Which has the highest population?</h2>
               
-              <div className="buttoncontainer">
-                <button className="countrybutton" onClick={handleClickcountry1}>
+              <div className="buttoncontainersingle">
+                <button className="countrybuttonsingle" onClick={handleClickcountry1}>
                   {countryName}
                 </button>
-                <button className="countrybutton" onClick={handleClickcountry2}>
+                <button className="countrybuttonsingle" onClick={handleClickcountry2}>
                     {countryName1}
                 </button>
               </div>

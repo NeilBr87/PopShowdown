@@ -3,13 +3,13 @@ body {
     color: white;
   }
   
-  .App {
+  .Appsingle {
     font-family: sans-serif;
     text-align: center;
     margin-top: 50px;
   }
   
-  .container {
+  .containerOfViewportsSingle {
     display: flex;
     flex-direction: row;
     align-items: space-around;
@@ -18,7 +18,7 @@ body {
     justify-content: center;
     text-align: center;
   }  
-  .countrycontainer {
+  .countrycontainersingle {
     background-color: rgb(235, 235, 235);
     padding: 20px 20px 20px;
     border: 1px solid black;
@@ -28,7 +28,7 @@ body {
     max-width: 420px;
   }
   
-  .countrybutton {
+  .countrybuttonsingle {
     width: 150px;
     height: 90px;
     font-weight: bold;
@@ -37,7 +37,7 @@ body {
     border-radius: 10px;
   }
   
-  .buttoncontainer {
+  .buttoncontainersingle {
     display: flex;
     flex-direction: row;
     align-items: space-around;
