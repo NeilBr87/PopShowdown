@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/SOC_Pop/static/css/main.7e0cfcce.css",
+    "main.js": "/SOC_Pop/static/js/main.36da05f2.js",
+    "static/js/787.9a548a2f.chunk.js": "/SOC_Pop/static/js/787.9a548a2f.chunk.js",
+    "static/media/Capture.JPG": "/SOC_Pop/static/media/Capture.52835e3a8374a3dca414.JPG",
+    "index.html": "/SOC_Pop/index.html",
+    "main.7e0cfcce.css.map": "/SOC_Pop/static/css/main.7e0cfcce.css.map",
+    "main.36da05f2.js.map": "/SOC_Pop/static/js/main.36da05f2.js.map",
+    "787.9a548a2f.chunk.js.map": "/SOC_Pop/static/js/787.9a548a2f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7e0cfcce.css",
+    "static/js/main.36da05f2.js"
+  ]
+}
